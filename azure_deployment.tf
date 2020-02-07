@@ -38,7 +38,7 @@ resource "azurerm_subnet" "subnet-2" {
 
 # Create Network Security Group and rule
 resource "azurerm_network_security_group" "nsg-3tier-back" {
-    name                = "nsg-1-front"
+    name                = "nsg-1-back"
     location            = "westeurope"
     resource_group_name = azurerm_resource_group.rg-3tier.name
     
@@ -56,7 +56,7 @@ resource "azurerm_network_security_group" "nsg-3tier-back" {
 }
 
 resource "azurerm_network_security_group" "nsg-3tier-front" {
-    name                = "nsg-2-back"
+    name                = "nsg-2-front"
     location            = "westeurope"
     resource_group_name = azurerm_resource_group.rg-3tier.name
     
